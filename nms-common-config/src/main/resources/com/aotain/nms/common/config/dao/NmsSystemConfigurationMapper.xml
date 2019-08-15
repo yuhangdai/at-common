@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aotain.nms.common.config.dao.NmsSystemConfigurationMapper">
+
+	<select id="selectConfig" resultType="com.aotain.nms.common.config.model.SystemConfiguration">
+		select 	
+			a.config_id as configId, 
+			a.config_key as configKey, 
+			a.config_value as configValue, 
+			a.config_name as configName, 
+			a.config_desc as configDesc, 
+			a.input_type as inputType, 
+			a.input_items as inputItems, 
+			a.model_type as modelType
+		from nms_dict_system_config a
+	</select>
+	
+</mapper>
